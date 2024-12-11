@@ -1,0 +1,9 @@
+type Query {
+  markets: [Market]
+  market(id: ID!): Market
+}
+
+type Market {
+  id: Int
+  name: String
+}
