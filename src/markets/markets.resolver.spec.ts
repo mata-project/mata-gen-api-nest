@@ -7,7 +7,7 @@ describe('MarketsResolver', () => {
   let resolver: MarketsResolver;
   const market: Market = {
     id: 1,
-    name: 'Aldi'
+    name: 'Aldi',
   };
 
   beforeEach(async () => {

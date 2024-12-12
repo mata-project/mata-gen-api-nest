@@ -1,8 +1,8 @@
 import { ParseIntPipe } from '@nestjs/common';
-import { Args,Query, Resolver } from '@nestjs/graphql';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 import { PubSub } from 'graphql-subscriptions';
-import {MarketsService} from './markets.service';
-import {Market} from '../graphql.schema';
+import { MarketsService } from './markets.service';
+import { Market } from '../graphql.schema';
 
 @Resolver('Market')
 export class MarketsResolver {

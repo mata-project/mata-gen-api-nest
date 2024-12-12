@@ -1,4 +1,3 @@
-
 /*
  * -------------------------------------------------------
  * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
@@ -9,14 +8,16 @@
 /* eslint-disable */
 
 export abstract class IQuery {
-    abstract markets(): Nullable<Nullable<Market>[]> | Promise<Nullable<Nullable<Market>[]>>;
+  abstract markets():
+    | Nullable<Nullable<Market>[]>
+    | Promise<Nullable<Nullable<Market>[]>>;
 
-    abstract market(id: string): Nullable<Market> | Promise<Nullable<Market>>;
+  abstract market(id: string): Nullable<Market> | Promise<Nullable<Market>>;
 }
 
 export class Market {
-    id?: Nullable<number>;
-    name?: Nullable<string>;
+  id?: Nullable<number>;
+  name?: Nullable<string>;
 }
 
 type Nullable<T> = T | null;
