@@ -34,7 +34,7 @@ describe('MarketsResolver', () => {
   });
 
   it('should return all markets', async () => {
-    const markets = await resolver.getCats();
+    const markets = await resolver.getMarkets();
     expect(markets.length).toEqual(1);
     expect(markets[0].name).toEqual(market.name);
   });
