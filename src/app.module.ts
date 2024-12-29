@@ -10,11 +10,14 @@ import { LoggingPlugin } from './common/plugins/logging.plugin';
     MarketsModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
+      // prop for playground
+      //playground: false,
       typePaths: ['./**/*.graphql'],
+      //TODO remove this logic
       transformSchema: (schema) => upperDirectiveTransformer(schema, 'upper'),
       installSubscriptionHandlers: true,
     }),
   ],
-  providers: [LoggingPlugin],
+  providers: [],
 })
 export class AppModule {}
