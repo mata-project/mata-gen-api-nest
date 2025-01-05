@@ -1,0 +1,8 @@
+type Query {
+  shoppingItems(userId: ID!): [ShoppingItem]
+}
+
+type ShoppingItem {
+  id: Int
+  name: String
+}

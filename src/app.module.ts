@@ -4,10 +4,12 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { upperDirectiveTransformer } from './common/directives/upper-case.directive';
 import { MarketsModule } from './markets/markets.module';
 import { LoggingPlugin } from './common/plugins/logging.plugin';
+import { ShoppingItemsModule } from './shopping-items/shoppingItems.module';
 
 @Module({
   imports: [
     MarketsModule,
+    ShoppingItemsModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       // prop for playground
