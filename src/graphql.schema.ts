@@ -21,6 +21,12 @@ export class Market {
     name?: Nullable<string>;
 }
 
+export abstract class IMutation {
+    abstract addShoppingItem(userId: string, name: string): Nullable<ShoppingItem> | Promise<Nullable<ShoppingItem>>;
+
+    abstract deleteShoppingItem(userId: string, shoppingItemId: number): Nullable<ShoppingItem> | Promise<Nullable<ShoppingItem>>;
+}
+
 export class ShoppingItem {
     id?: Nullable<number>;
     name?: Nullable<string>;
