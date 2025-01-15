@@ -1,0 +1,13 @@
+type Query {
+  shoppingItems(userId: ID!): [ShoppingItem]
+}
+
+type Mutation {
+  addShoppingItem(userId: ID!, name: String!): ShoppingItem
+  deleteShoppingItem(userId: ID!, shoppingItemId: Int!): ShoppingItem
+}
+
+type ShoppingItem {
+  id: Int
+  name: String
+}
