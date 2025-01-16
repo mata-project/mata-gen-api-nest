@@ -23,7 +23,7 @@ import { ConfigModule } from '@nestjs/config';
       installSubscriptionHandlers: true,
     }),
   ],
-  providers: [DatabaseService],
+  providers: [],
   exports: [],
 })
 export class AppModule {}

@@ -12,7 +12,7 @@ export class ShoppingItemsResolver {
     @Args('userId', ParseIntPipe)
     userId: number,
   ): Promise<ShoppingItem[]> {
-    return this.shoppingItemsService.findShoppingItemsByUserId(1);
+    return this.shoppingItemsService.findShoppingItemsByUserId(userId);
   }
 
   @Mutation('addShoppingItem')
@@ -21,11 +21,10 @@ export class ShoppingItemsResolver {
     userId: number,
     @Args('name')
     name: string,
+    @Args('marketId', ParseIntPipe)
+    marketId: number,
   ): Promise<ShoppingItem> {
-    return this.shoppingItemsService.addShoppingItem(userId, {
-      id: Math.floor(Math.random() * 1000),
-      name,
-    });
+    return this.shoppingItemsService.addShoppingItem(userId, name, marketId);
   }
 
   @Mutation('deleteShoppingItem')
@@ -34,7 +33,13 @@ export class ShoppingItemsResolver {
     userId: number,
     @Args('shoppingItemId')
     shoppingItemId: number,
+    @Args('marketId', ParseIntPipe)
+    marketId: number,
   ): Promise<ShoppingItem> {
-    return this.shoppingItemsService.deleteShoppingItem(userId, shoppingItemId);
+    return this.shoppingItemsService.deleteShoppingItem(
+      userId,
+      shoppingItemId,
+      marketId,
+    );
   }
 }
