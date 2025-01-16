@@ -33,8 +33,6 @@ export class DatabaseService implements OnModuleInit {
       console.log(
         'Connection to PostgreSQL has been established successfully.',
       );
-      const markets = await this.query('select * from markets');
-      console.log(markets.rows);
     } catch (err) {
       console.error('Unable to connect to the database:', err.message);
     }

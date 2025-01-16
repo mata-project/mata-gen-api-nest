@@ -1,8 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { Market } from '../graphql.schema';
+import { DatabaseService } from '../db';
 
 @Injectable()
 export class MarketsService {
+  constructor(private databaseService: DatabaseService) {}
+
   private readonly markets: Array<Market> = [
     { id: 1, name: 'Aldi' },
     { id: 2, name: 'Lidl' },
@@ -12,8 +15,10 @@ export class MarketsService {
     { id: 6, name: 'Carrefour' },
   ];
 
-  findAll(): Market[] {
-    return this.markets;
+  async findAll(): Promise<Market[]> {
+    const fromDb = await this.databaseService.query('select * from markets');
+    const result = fromDb.rows;
+    return result;
   }
 
   findOneById(id: number): Market {

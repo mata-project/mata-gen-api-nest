@@ -24,6 +24,6 @@ import { ConfigModule } from '@nestjs/config';
     }),
   ],
   providers: [DatabaseService],
-  exports: [DatabaseService],
+  exports: [],
 })
 export class AppModule {}
