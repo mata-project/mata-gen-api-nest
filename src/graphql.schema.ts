@@ -14,6 +14,8 @@ export abstract class IQuery {
     abstract market(id: string): Nullable<Market> | Promise<Nullable<Market>>;
 
     abstract shoppingItems(userId: string): Nullable<Nullable<ShoppingItem>[]> | Promise<Nullable<Nullable<ShoppingItem>[]>>;
+
+    abstract user(email?: Nullable<string>, password?: Nullable<string>): Nullable<User> | Promise<Nullable<User>>;
 }
 
 export class Market {
@@ -31,6 +33,12 @@ export class ShoppingItem {
     id?: Nullable<number>;
     name?: Nullable<string>;
     market?: Nullable<Market>;
+}
+
+export class User {
+    id?: Nullable<number>;
+    name?: Nullable<string>;
+    isUser?: Nullable<boolean>;
 }
 
 type Nullable<T> = T | null;

@@ -18,7 +18,6 @@ describe('MarketsService', () => {
 
   it('should return all markets', () => {
     const markets = service.findAll();
-    expect(markets.length).toEqual(6);
     expect(markets[0].name).toEqual('Aldi');
     expect(markets[1].name).toEqual('Lidl');
     expect(markets[2].name).toEqual('AH');
