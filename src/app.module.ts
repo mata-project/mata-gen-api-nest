@@ -5,9 +5,12 @@ import { upperDirectiveTransformer } from './common/directives/upper-case.direct
 import { MarketsModule } from './markets/markets.module';
 import { LoggingPlugin } from './common/plugins/logging.plugin';
 import { ShoppingItemsModule } from './shopping-items/shoppingItems.module';
+import { DatabaseService } from './db';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     MarketsModule,
     ShoppingItemsModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -21,5 +24,6 @@ import { ShoppingItemsModule } from './shopping-items/shoppingItems.module';
     }),
   ],
   providers: [],
+  exports: [],
 })
 export class AppModule {}
