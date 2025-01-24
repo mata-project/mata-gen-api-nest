@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Market } from '../graphql.schema';
 import { DatabaseService } from '../db';
-import { log } from 'console';
 
 @Injectable()
 export class MarketsService {

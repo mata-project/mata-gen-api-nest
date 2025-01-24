@@ -1,0 +1,9 @@
+type Query {
+  user(email: String, password: String): User
+}
+
+type User {
+  id: Int
+  name: String
+  isUser: Boolean
+}
