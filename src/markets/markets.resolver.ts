@@ -9,6 +9,12 @@ export class MarketsResolver {
 
   @Query('markets')
   async getMarkets() {
+    return [
+      {
+        id: 666,
+        name: 'mockName',
+      },
+    ];
     return this.marketsService.findAll();
   }
 
