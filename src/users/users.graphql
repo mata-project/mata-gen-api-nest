@@ -6,4 +6,6 @@ type User {
   id: Int
   name: String
   isUser: Boolean
+  email: String
+  password: String
 }
