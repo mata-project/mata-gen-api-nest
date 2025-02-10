@@ -10,7 +10,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:3000',
       'http://localhost:3001',
-      'http://52.212.62.231:3001',
+      'http://3.250.175.26:3001',
     ],
   });
 

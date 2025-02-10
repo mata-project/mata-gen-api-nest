@@ -12,10 +12,10 @@ export class DatabaseService implements OnModuleInit {
       user: process.env.DATABASE_USERNAME,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
-      //ssl: false, // 👈 Disable SSL
-      ssl: {
-        rejectUnauthorized: false, // Use proper SSL certificate in production
-      },
+      ssl: false, // 👈 Disable SSL
+      // ssl: {
+      //   rejectUnauthorized: false, // Use proper SSL certificate in production
+      // },
     });
 
     // Log database connection events
