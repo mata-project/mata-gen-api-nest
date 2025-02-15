@@ -31,9 +31,6 @@ export class DatabaseService implements OnModuleInit {
   async onModuleInit() {
     try {
       await this.pool.connect();
-      console.log(
-        'Connection to PostgreSQL has been established successfully.',
-      );
     } catch (err) {
       console.error('Unable to connect to the database:', err.message);
     }
