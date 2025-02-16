@@ -12,6 +12,7 @@ async function bootstrap() {
       'http://localhost:3001',
       'http://3.250.175.26:3001',
       'https://3.250.175.26',
+      'http://3.250.175.26',
     ],
   });
 
