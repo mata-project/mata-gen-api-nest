@@ -13,6 +13,7 @@ async function bootstrap() {
       'http://3.250.175.26:3001',
       'https://3.250.175.26',
       'http://3.250.175.26',
+      'https://mymarketlist.click',
     ],
   });
 
