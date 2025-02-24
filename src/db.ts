@@ -18,9 +18,8 @@ export class DatabaseService implements OnModuleInit {
       },
     });
 
-    // Log database connection events
     this.pool.on('connect', () => {
-      console.log('Database connected successfully');
+      //console.log('Database connected successfully');
     });
 
     this.pool.on('error', (err) => {

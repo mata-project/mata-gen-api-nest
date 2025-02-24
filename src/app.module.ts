@@ -3,9 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { upperDirectiveTransformer } from './common/directives/upper-case.directive';
 import { MarketsModule } from './markets/markets.module';
-import { LoggingPlugin } from './common/plugins/logging.plugin';
 import { ShoppingItemsModule } from './shopping-items/shoppingItems.module';
-import { DatabaseService } from './db';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 

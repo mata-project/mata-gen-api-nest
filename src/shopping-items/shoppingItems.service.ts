@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Market, ShoppingItem } from '../graphql.schema';
+import { ShoppingItem } from '../graphql.schema';
 import { DatabaseService } from '../db';
 
 @Injectable()

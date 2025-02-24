@@ -6,7 +6,7 @@ import { User } from '../graphql.schema';
 describe('UsersResolver', () => {
   let resolver: UsersResolver;
   const user: User = {
-    id: 1,
+    id: '1',
     name: 'John Doe',
     isUser: true,
   };
