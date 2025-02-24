@@ -36,9 +36,11 @@ export class ShoppingItem {
 }
 
 export class User {
-    id?: Nullable<number>;
+    id?: Nullable<string>;
     name?: Nullable<string>;
     isUser?: Nullable<boolean>;
+    email?: Nullable<string>;
+    password?: Nullable<string>;
 }
 
 type Nullable<T> = T | null;

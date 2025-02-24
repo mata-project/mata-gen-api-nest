@@ -9,6 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "ts-node generate-typings && nest start",
+    "start:prod:aws": "pm2 start dist/src/main.js",
     "start:dev": "ts-node generate-typings && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/src/main",
@@ -33,6 +34,7 @@
     "graphql": "16.8.1",
     "graphql-subscriptions": "2.0.0",
     "pg": "^8.13.1",
+    "pm2": "^5.4.3",
     "reflect-metadata": "0.2.2",
     "rimraf": "5.0.10",
     "rxjs": "7.8.1"

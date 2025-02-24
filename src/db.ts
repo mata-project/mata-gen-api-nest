@@ -12,14 +12,14 @@ export class DatabaseService implements OnModuleInit {
       user: process.env.DATABASE_USERNAME,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
+      //ssl: false, // 👈 Disable SSL
       ssl: {
         rejectUnauthorized: false, // Use proper SSL certificate in production
       },
     });
 
-    // Log database connection events
     this.pool.on('connect', () => {
-      console.log('Database connected successfully');
+      //console.log('Database connected successfully');
     });
 
     this.pool.on('error', (err) => {
@@ -30,9 +30,6 @@ export class DatabaseService implements OnModuleInit {
   async onModuleInit() {
     try {
       await this.pool.connect();
-      console.log(
-        'Connection to PostgreSQL has been established successfully.',
-      );
     } catch (err) {
       console.error('Unable to connect to the database:', err.message);
     }
