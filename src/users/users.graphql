@@ -3,7 +3,7 @@ type Query {
 }
 
 type User {
-  id: Int
+  id: String
   name: String
   isUser: Boolean
   email: String

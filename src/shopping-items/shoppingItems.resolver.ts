@@ -9,16 +9,16 @@ export class ShoppingItemsResolver {
 
   @Query('shoppingItems')
   async getShoppingItems(
-    @Args('userId', ParseIntPipe)
-    userId: number,
+    @Args('userId')
+    userId: string,
   ): Promise<ShoppingItem[]> {
     return this.shoppingItemsService.findShoppingItemsByUserId(userId);
   }
 
   @Mutation('addShoppingItem')
   async addShoppingItem(
-    @Args('userId', ParseIntPipe)
-    userId: number,
+    @Args('userId')
+    userId: string,
     @Args('name')
     name: string,
     @Args('marketId', ParseIntPipe)
@@ -29,8 +29,8 @@ export class ShoppingItemsResolver {
 
   @Mutation('deleteShoppingItem')
   async deleteShoppingItem(
-    @Args('userId', ParseIntPipe)
-    userId: number,
+    @Args('userId')
+    userId: string,
     @Args('shoppingItemId')
     shoppingItemId: number,
     @Args('marketId', ParseIntPipe)
