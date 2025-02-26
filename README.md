@@ -1,41 +1,39 @@
-## Description
+# MATA Gen API (NestJS)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Overview
+MATA Gen API is a NestJS-based backend service designed to handle the generation functionalities within the MATA project. It provides a scalable and modular architecture, making it easy to integrate with other services in the ecosystem.
 
-## Project setup
+## Installation & Setup
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (vXX+)
+- PostgreSQL
 
-```bash
-$ npm install
-```
+### Setup Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mata-project/mata-gen-api-nest.git
+   cd mata-gen-api-nest
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create and configure the `.env` file:
+   ```bash
+   cp .env.example .env
+   # Edit the .env file with your configuration
+   ```
+4. Ensure a PostgreSQL database is running locally. You can use `init.sql` to initialize the database:
+   ```bash
+   psql -U your_user -d your_database -f init.sql
+   ```
+5. Run the application:
+   ```bash
+   npm run start:dev
+   ```
 
-When the application is running, you can go to http://localhost:3000/graphql to access the GraphQL Playground.
-
-## Compile and run the project
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## License
+This project is licensed under the **MIT License**.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
